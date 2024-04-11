@@ -10,11 +10,8 @@ public class FindingKthElement {
 
         // 최대힙(최대 값이 우선순위인 큐)
         // PriorityQueue<Integer> priorityQueueHighest = new PriorityQueue<>(Collections.reverseOrder());
-        
-        
         // 예시) nums = {3, 2, 1, 4}, k=2 
         for (int num : nums) {
-
             // nums 배열의 원소들을 하나씩 최소힙에 추가한다. 
             minHeap.offer(num);
 
