@@ -1,5 +1,6 @@
-
 import java.util.PriorityQueue;
+
+public class Main {
 public class FindingKthElement {
     public int findKthLargest(int[] nums, int k) {
         // 최소힙(최소 값이 우선순위인 큐)으로 정렬이 된다.
@@ -12,8 +13,10 @@ public class FindingKthElement {
         // PriorityQueue<Integer> priorityQueueHighest = new PriorityQueue<>(Collections.reverseOrder());
         // 예시) nums = {3, 2, 1, 4}, k=2 
         for (int num : nums) {
-            // nums 배열의 원소들을 하나씩 최소힙에 추가한다. 
+            // nums에 원소들을 하나씩 최소힙에 추가한다. 
             minHeap.offer(num);
+            
+            // nums에 원소가 k개를 넘어가면 첫 번째 값(최소값)을 제거하고  
 
             if (minHeap.size() > k) {
                 minHeap.poll();
@@ -24,4 +27,5 @@ public class FindingKthElement {
         // 3을 리턴
         return minHeap.poll();
     }
+}
 }
